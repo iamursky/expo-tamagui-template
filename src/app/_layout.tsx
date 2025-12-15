@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { TamaguiProvider } from "tamagui";
 
-import { config } from "../tamagui.config";
+import tamaguiConfig from "../tamagui.config";
 
 SplashScreen.preventAutoHideAsync();
 SplashScreen.setOptions({
@@ -36,7 +36,7 @@ export default function RootLayout() {
   }
 
   return (
-    <TamaguiProvider config={config} defaultTheme={colorScheme!}>
+    <TamaguiProvider config={tamaguiConfig} defaultTheme={colorScheme!}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <Stack />
       </ThemeProvider>
